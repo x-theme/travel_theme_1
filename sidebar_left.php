@@ -5,8 +5,16 @@
 </div>
 
 <div class='posts-left-1'>
-	<? $option = array('no' => 14 ); ?>
-	<?=latest('x-latest-travel-2-posts', bo_table(1) , 14 , 20, 1, $option)?>
+	<?
+		include widget(
+			array(
+				'code'		=> 'x-latest-travel-2-posts',
+				'name'		=> 'x-latest-travel-2-posts',
+				'default_forum_id'	=> bo_table(1),
+				'git'		=> 'https://github.com/x-widget/x-latest-travel-2-posts',
+			)
+		);	
+	?>
 </div>
 
 <div class='banner-left'>

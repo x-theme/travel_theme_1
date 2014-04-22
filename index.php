@@ -39,19 +39,31 @@
 		
 		<div class ='main-content'>
 			<div class='travel_images_with_caption_wrapper'>
-				<?=latest("x-travel_2_images_with_caption", bo_table(2), 6, 20)?>
+				<?//=latest("x-travel_2_images_with_caption", bo_table(2), 6, 20)?>
+				<?
+				include widget(
+					array(
+						'code'		=> 'x-travel_2_images_with_caption',
+						'name'		=> 'x-travel_2_images_with_caption',
+						'default_forum_id'	=> bo_table(1),
+						'git'		=> 'https://github.com/x-widget/x-travel_2_images_with_caption',
+					)
+				);
+				?>
 			</div>
 
 
 			<div class='right-widgets'>
 				<div class='travel_posts_with_image_right'>
 				<?
-	
-					$option = array(
-									'icon' => x::url_theme()."/img/chat_icon2.png"
+					include widget(
+						array(
+							'code'		=> 'x-travel_2_posts_with_image_right',
+							'name'		=> 'x-travel_2_posts_with_image_right',
+							'default_forum_id'	=> bo_table(1),
+							'git'		=> 'https://github.com/x-widget/x-travel_2_posts_with_image_right',
+						)
 					);
-					$latest_2_output = latest("x-travel_2_posts_with_image_right", bo_table(3), 3, 50, $cache_time=1, $option );
-					echo $latest_2_output;
 				?>
 				</div>
 				<div class='travel_2_timezone'>
@@ -86,25 +98,38 @@
 		<div class='lower-posts'>
 			<div class='travel_left_posts'>		
 				<?
-					$option = array( 
-									'icon'=> x::url_theme()."/img/folded-paper.png"
-								);
-					$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(4), 4, 20, 1, $option );
-					echo $latest_1_output;
+					include widget(
+						array(
+							'code'		=> 'x-latest-travel-lower-posts-1',
+							'name'		=> 'x-latest-travel-lower-posts',
+							'default_forum_id'	=> bo_table(1),
+							'git'		=> 'https://github.com/x-widget/x-latest-travel-lower-posts',
+						)
+					);
 				?>
 			</div>
 			<div class='travel_middle_posts'>		
 			<?
-				$option = array( 
-								'icon'=> x::url_theme()."/img/folded-paper.png"
-							);
-				
-				$latest_1_output = latest("x-latest-travel-lower-posts", bo_table(5), 4, 20, 1, $option );
-				echo $latest_1_output;
+				include widget(
+						array(
+							'code'		=> 'x-latest-travel-lower-posts-2',
+							'name'		=> 'x-latest-travel-lower-posts',
+							'default_forum_id'	=> bo_table(1),
+							'git'		=> 'https://github.com/x-widget/x-latest-travel-lower-posts',
+						)
+					);
 			?>
 			</div>
 			<div class='travel_right_posts'>		
-				<?=visit('x-visit-travel')?>
+				<?
+					include widget(
+						array(
+							'code'		=> 'x-visit-travel',
+							'name'		=> 'x-visit-travel',							
+							'git'		=> 'https://github.com/x-widget/x-visit-travel',
+						)
+					);
+				?>
 			</div>
 			
 				<div style='clear:both;'></div>
