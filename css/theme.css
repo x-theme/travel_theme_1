@@ -96,9 +96,10 @@
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	text-align:center;
 }
  .main-menu li {
-	float: left;
+	display:inline-block;
 }
 
 .main-menu li.first-item {
@@ -120,7 +121,7 @@
 	font-family: '맑은 고딕', AppleGothic;
 	color: #0e5565;
 	display: inline-block;
-	padding: 9px 20px 7px 20px;
+	padding: 9px 16px 3px 20px;
 	border-bottom: solid 2px transparent;
 }
 
@@ -174,8 +175,8 @@
 }
 
 .floating-bar .float-image-wrapper{
-	border:1px solid #bbbbbb;
-	background-color:#e6e6e6;
+	border:1px solid #0e5565;
+	background-color:#ffffff;
 	padding:10px 9px;
 }
 
@@ -198,8 +199,9 @@
 .floating-bar .back-to-top{
 	background-color:#bbbbbb;
 	color:#ffffff;
-	height:24px;
-	width:26px;
+	height:27px;
+	width:30px;
+	padding-top:3px;
 	margin:10px auto 0 auto;
 	text-align:center;
 	font-size:.8em;
