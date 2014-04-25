@@ -89,7 +89,7 @@
 				<div class='travel_2_right_banner'>
 				<?php
 					if ( file_exists( x::path_file ( 'travel_right_banner' ) ) ) {
-						if ( !$url = $banner['href'] ) {
+						if ( !$url = x::meta('travel_right_banner_url') ) {
 							$url = "javascript:void(0);";
 							$target = "";
 						}
