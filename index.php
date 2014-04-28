@@ -30,8 +30,8 @@
 						}					
 						
 						echo "<div class='banner-image image_num_$selected $first_image'>";
-						echo "<a href='$url' $target'><img src='$banner[src]'></a>";
-						echo "<a href='$url' $target'><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
+						echo "<a href='$url' $target><img src='$banner[src]'></a>";
+						echo "<a href='$url' $target><span class='banner-content'><p class='banner-text'>".cut_str(strip_tags($banner['text']),50,'...')."</p></span></a>";
 						echo "<div class='banner-more'><a href='$url' $target'>자세히 &gt;</a></div>";
 						echo "</div>";
 
